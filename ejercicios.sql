@@ -58,3 +58,24 @@ CREATE TABLE productos
         (33,'A Dangerous Method','Drama','Independiente','44864475',2011),
         (34,'27 Dresses','Comedia','Fox','53436218',2008),
         (35,'(500) Days of Summer','comedia','Fox','8096',2009);
+
+--Encuentra y muestra el título de cada película. 
+SELECT titulo FROM peliculas 
+
+--Encuentra y muestra la empresa de cada película. 
+SELECT empresa FROM peliculas 
+
+--Encuentra y muestra el título y la empresa de cada película. 
+SELECT titulo,empresa FROM peliculas
+
+--Encuentra y muestra el título y el estreno de cada película. 
+SELECT titulo,estreno FROM peliculas 
+
+--Encuentra y muestra toda la información de cada película. 
+SELECT * FROM peliculas  
+
+--Encuentra y muestra el título, género y el estreno de las películas hechas en el año 2008. 
+SELECT titulo,genero,estreno FROM peliculas WHERE  estreno = 2018
+
+--Encuentra y muestra el título y la descripción de las películas estrenadas entre los años 2007 y 2009, de este resultado debes mostrar sólo 5 registros.
+SELECT * FROM peliculas WHERE  estreno BETWEEN 2007 AND 2009 LIMIT  5 
