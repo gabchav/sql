@@ -18,3 +18,6 @@ ALTER USER postgres WITH PASSWORD '123';
 
 #Seleccionar o cambiar base de datos
 \c otrabasededatos
+
+#Salir de postgres
+\q
