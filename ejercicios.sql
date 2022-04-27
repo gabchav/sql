@@ -60,22 +60,34 @@ CREATE TABLE productos
         (35,'(500) Days of Summer','comedia','Fox','8096',2009);
 
 --Encuentra y muestra el título de cada película. 
-SELECT titulo FROM peliculas 
+SELECT titulo FROM peliculas;
 
 --Encuentra y muestra la empresa de cada película. 
-SELECT empresa FROM peliculas 
+SELECT empresa FROM peliculas;
 
 --Encuentra y muestra el título y la empresa de cada película. 
-SELECT titulo,empresa FROM peliculas
+SELECT titulo, empresa FROM peliculas;
 
 --Encuentra y muestra el título y el estreno de cada película. 
-SELECT titulo,estreno FROM peliculas 
+SELECT titulo, estreno FROM peliculas;
 
 --Encuentra y muestra toda la información de cada película. 
-SELECT * FROM peliculas  
+SELECT * FROM peliculas;
 
 --Encuentra y muestra el título, género y el estreno de las películas hechas en el año 2008. 
-SELECT titulo,genero,estreno FROM peliculas WHERE  estreno = 2018
+SELECT titulo, genero, estreno FROM peliculas WHERE estreno = 2018;
 
 --Encuentra y muestra el título y la descripción de las películas estrenadas entre los años 2007 y 2009, de este resultado debes mostrar sólo 5 registros.
-SELECT * FROM peliculas WHERE  estreno BETWEEN 2007 AND 2009 LIMIT  5 
+SELECT * FROM peliculas WHERE estreno BETWEEN 2007 AND 2009 LIMIT 5;
+
+--Encuentra y muestra la cantidad de películas realizadas del 2009 en adelante. 
+SELECT Count(*) AS cantidad FROM peliculas WHERE estreno >= 2009; 
+
+--Encuentra y muestra la cantidad de películas del género comedia. 
+SELECT Count(*) AS cantidad FROM peliculas WHERE Lower(genero) = 'comedia'; 
+
+--Encuentra y muestra la cantidad de películas de la empresa Universal.
+SELECT Count(*) AS cantidad FROM peliculas WHERE Lower(empresa) = 'universal'; 
+
+--Encuentra y muestra la cantidad de películas de genero comedia realizadas a partir del 2009.
+SELECT Count(*) AS cantidad FROM peliculas WHERE Lower(genero) = 'comedia' AND estreno >= 2009;
